@@ -1,0 +1,4 @@
+# ignore all logs
+*.png
+# ignore all jpg
+*.jpg
