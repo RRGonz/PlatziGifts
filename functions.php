@@ -15,6 +15,11 @@ function assets(){
 
     wp_enqueue_style( 'estilos', get_stylesheet_uri(  ), array('bootstrap', 'montserrat'), '1.0', 'all' );
 
+    wp_register_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', '', '1.16.0', true);
+
+    wp_enqueue_script( 'bootstraps', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array('jquery', 'popper'), '4.4.1', true);
+    wp_enqueue_script( 'scripts', get_template_directory_uri(  ).'/assets/js/custom.js', '', '1.0', true );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'assets');
